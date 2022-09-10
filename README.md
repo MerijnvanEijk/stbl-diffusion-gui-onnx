@@ -7,15 +7,26 @@ Created to work with dml_onnxy.py(AMD based)
 Credits go to for stable diffusion: 
 https://huggingface.co/CompVis/stable-diffusion/tree/main
 
+https://github.com/huggingface/diffusers
+
 And to this guide, follow this quide to get it operational.
 https://gitgudblog.vercel.app/posts/stable-diffusion-amd-win10
 Should integrate with the dml_onnx.py of the guide.
 
 ## Run
 place in the same folder (.../diffusers/examples/inference/)
+
 run: python stbl_gui.py
 
 ## issues
 If you have any issues remove this line in the gui_init:
  - `sys.stderr = StdoutRedirector(self.text_box)`
+
 Will not map error output to textbox, as the pipeline seems to post its progress to stderr, its remapped to the text box for normal runs to observe the progress.
+
+## Notes:
+The files: 
+ - save_onnx.py
+ - dml_onnx.py
+
+Are for reference only, these are the ones I use. These are copies from https://github.com/huggingface/diffusers
